@@ -12,3 +12,7 @@
 9. If successfull, continue.
 10. `git clone https://github.com/OhGodACompany/OhGodATool.git`
 11. `cd OhGodATool && make`
+
+## Problems
+### Can not uninstall amdgpu-pro because of rocm-dkms
+Run `sudo dpkg -i --force-overwrite <path-to-deb>

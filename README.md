@@ -15,4 +15,7 @@
 
 ## Problems
 ### Can not uninstall amdgpu-pro because of rocm-dkms
-Run `sudo dpkg -i --force-overwrite <path-to-deb>`
+1. Run `sudo dpkg -i --force-overwrite <path-to-deb>`
+2. Run `for amdgpupkg in $(dpkg --list | grep amdgpu-pro | awk '{print $2}'); do echo $amdgpupkg; sudo dpkg --purge --force-all $amdgpupkg; done`
+3. Run `for amdgpupkg in $(dpkg --list | grep amdgpu | awk '{print $2}'); do echo $amdgpupkg; sudo dpkg --purge --force-all $amdgpupkg; done`
+4. Remove `sudo apt purge rock-dkms`

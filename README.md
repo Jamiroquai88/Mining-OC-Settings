@@ -15,4 +15,4 @@
 
 ## Problems
 ### Can not uninstall amdgpu-pro because of rocm-dkms
-Run `sudo dpkg -i --force-overwrite <path-to-deb>
+Run `sudo dpkg -i --force-overwrite <path-to-deb>`

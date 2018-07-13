@@ -1,4 +1,6 @@
 171.2 Mh/s - DPM 3 3 3 5 5 3 V 950 950 950 950 950 950 MEM 2000 1975 2150 2075 2175 2175 - STABLE=FOR NOW
 # GPU2 getting incorrect share, lowering MEM by 25
+
 DPM 3 3 3 5 5 3 V 950 950 950 950 950 950 MEM 2000 1975 2125 2075 2175 2175 - STABLE=FOR NOW
 # raising GPU3-5 MEM by 25
+# backing off for GPU4-5, hashrate was lowered

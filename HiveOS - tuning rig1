@@ -4,3 +4,8 @@
 DPM 3 3 3 5 5 3 V 950 950 950 950 950 950 MEM 2000 1975 2125 2075 2175 2175 - STABLE=FOR NOW
 # raising GPU3-5 MEM by 25
 # backing off for GPU4-5, hashrate was lowered
+
+# GPU 4 hangs in OpenCL call - lowering by 25
+
+176.7 Mh/s - DPM 3 3 3 6 6 6 V 950 950 950 950 950 950 MEM 2125 1975 2125 2150 2150 2175
+# changed DPM to higher values to get some nice hashrate around 30Mh/s per card, STABLE=FOR NOW

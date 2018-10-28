@@ -11,7 +11,7 @@ sed -i 's@fDevDonationLevel = 2@fDevDonationLevel = 0@g' xmrstak/donate-level.hp
 mkdir build
 cd build
 
-cmake . -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
+cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
 make
 
 cd bin

@@ -1,14 +1,27 @@
 # Mining
 
-## How to mine on Azure for free
-1. Go to https://azure.microsoft.com/en-us/free/ - create account (you need to add your payment method).
+## How to mine CryptoNightv8 on Azure for free
+1. Go to https://azure.microsoft.com/en-us/free/ - create account (you need to add your payment method). You will get some free credit (200 USD), which we are going to use.
 2. Create batch account https://portal.azure.com/#create/Microsoft.BatchAccount
 ```bash
-    Account name: Just a name for your batch-account, e.g. `batchacc1`
-    Resource Group: Click 'Create New' and give it a name, e.g. `myRecGroup`
-    Location: Any
-    Leave others at default
+Account name: Just a name of your batch-account, e.g. `batchacc1`
+Resource Group: Click 'Create New' and give it a name, e.g. `myRecGroup`
+Location: Any
+Leave others at default and press OK
 ```
+3. Wait for a few seconds, go to your new batch account and create pool (set of computing nodes). We are gonna create Ubuntu 18.04 VM.
+```bash
+Pool ID: name of the pool, e. g. `pool1`
+Publisher: Canonical
+Sku: 18.04-LTS
+Node pricing tier: Standard F2 (2Cores, 4GB)
+Leave others at default and press OK
+```
+4. Go to your new pool and click `Start task`. This task will be executed after node initialization. It is important to note, that so far we have no physical VMs. Put this into `Command line:`
+```bash
+/bin/bash -c "sudo apt install -y cmake; sudo apt install -y g++; git clone https://github.com/fireice-uk/xmr-stak.git; cd xmr-stak; sed -i 's@fDevDonationLevel = 2@fDevDonationLevel = 0@g' xmrstak/donate-level.hpp; mkdir build; cd build; cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF -DHWLOC_ENABLE=OFF -DMICROHTTPD_ENABLE=OFF -DOpenSSL_ENABLE=OFF; make install; cd bin; /xmr-stak -o xmr-us-east1.nanopool.org:14444 -u 4GdoN7NCTi8a5gZug7PrwZNKjvHFmKeV11L6pNJPgj5QNEHsN6eeX3DaAQFwZ1ufD4LYCZKArktt113W7QjWvQ7CW84M1KW4jPuQAEkbZn --currency cryptonight_v8 -i 0 -p "x" -r "azure""
+```
+
 
 ## How to mine on Ubuntu 18.04
 1. Download drivers from https://support.amd.com/en-us/kb-articles/Pages/AMDGPU-Pro-Beta-Mining-Driver-for-Linux-Release-Notes.aspx

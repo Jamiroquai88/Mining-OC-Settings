@@ -15,6 +15,6 @@ cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
 make
 
 cd bin
-./xmr-stak -o xmr-us-east1.nanopool.org:14444 \
+./xmr-stak -o pool.supportxmr.com:5555 \
     -u 4GdoN7NCTi8a5gZug7PrwZNKjvHFmKeV11L6pNJPgj5QNEHsN6eeX3DaAQFwZ1ufD4LYCZKArktt113W7QjWvQ7CW84M1KW4jPuQAEkbZn \
-    --currency cryptonight_v8 -i 0 -p "x" -r "azure"
+    --currency cryptonight_v8 -p x -r azure

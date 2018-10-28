@@ -18,4 +18,4 @@ cd bin
 ./xmr-stak \
     -o $1 \
     -u $2 \
-    --currency cryptonight_v8 -p x -r azure
+    --currency cryptonight_v8 -p "x" -r "azure" -i 0

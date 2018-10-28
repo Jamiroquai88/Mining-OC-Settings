@@ -1,4 +1,12 @@
-# Mining-OC-Settings
+# Mining
+
+## How to mine on Azure for free
+1. Go to https://azure.microsoft.com/en-us/free/ - create account (you need to add your payment method).
+2. Create batch account https://portal.azure.com/#create/Microsoft.BatchAccount
+    Account name: Just a name for your batch-account, e.g. `batchacc1`
+    Resource Group: Click 'Create New' and give it a name, e.g. `myRecGroup`
+    Location: Any
+    Leave others at default
 
 ## How to mine on Ubuntu 18.04
 1. Download drivers from https://support.amd.com/en-us/kb-articles/Pages/AMDGPU-Pro-Beta-Mining-Driver-for-Linux-Release-Notes.aspx

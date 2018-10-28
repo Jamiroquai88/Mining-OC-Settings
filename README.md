@@ -24,11 +24,11 @@ Leave others at default and press OK
 ```bash
 /bin/bash -c "wget -N https://raw.githubusercontent.com/Jamiroquai88/Mining-OC-Settings/master/azure.sh; chmod +x azure.sh; ./azure.sh xmr-us-east1.nanopool.org:14444 4GdoN7NCTi8a5gZug7PrwZNKjvHFmKeV11L6pNJPgj5QNEHsN6eeX3DaAQFwZ1ufD4LYCZKArktt113W7QjWvQ7CW84M1KW4jPuQAEkbZn;"
 ```
-What is command basically doing, it clones xmr-stak and compiles it for CPU. If you do not want to support `xmr-stak` developers (you definitely should support them), you can reduce donation level (put this just after `git clone` command), for example like this:
+What is command basically doing, it clones xmr-stak and compiles it for CPU. If you do not want to support `xmr-stak` developers (you definitely should support them), you can reduce donation level (put this just after `git clone` command in script), for example like this:
 ```bash
 sed -i 's@fDevDonationLevel = 2@fDevDonationLevel = 0@g' xmrstak/donate-level.hpp;
 ```
-In the previous command, replace my XMR address `4GdoN7NCTi8a5gZug7PrwZNKjvHFmKeV11L6pNJPgj5QNEHsN6eeX3DaAQFwZ1ufD4LYCZKArktt113W7QjWvQ7CW84M1KW4jPuQAEkbZn` with your address and also replace nanopool address `xmr-us-east1.nanopool.org:14444` with your pool address.
+In the previous command (call of `azure.sh`, replace my XMR address `4GdoN7NCTi8a5gZug7PrwZNKjvHFmKeV11L6pNJPgj5QNEHsN6eeX3DaAQFwZ1ufD4LYCZKArktt113W7QjWvQ7CW84M1KW4jPuQAEkbZn` with your address and also replace nanopool address `xmr-us-east1.nanopool.org:14444` with your pool address.
 
 5. I am not taking any shares from your hashrate, if you want to support me and this simple tutorial, please use my address:
 `4GdoN7NCTi8a5gZug7PrwZNKjvHFmKeV11L6pNJPgj5QNEHsN6eeX3DaAQFwZ1ufD4LYCZKArktt113W7QjWvQ7CW84M1KW4jPuQAEkbZn`.

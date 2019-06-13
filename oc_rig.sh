@@ -19,11 +19,11 @@ sudo ./ohgodatool -i 3 --core-state 7 --core-vddc-idx 9
 sudo ./ohgodatool -i 4 --core-state 7 --core-vddc-idx 10
 sudo ./ohgodatool -i 5 --core-state 7 --core-vddc-idx 9
 
-vddc_voltages=(945 850 1050 860 815 850)
+vddc_voltages=(955 885 1050 865 820 855)
 # set all voltage states from 1 upwards to xxx mV:
 for gpuid in ${!vddc_voltages[*]}
 do
-    if [[ "$gpuid" != "0" ]] && [[ "$gpuid" != "2" ]]; then
+    if [[ "$gpuid" != "2" ]] && [[ "$gpuid" != "2" ]]; then
         echo "Setting up VDDC Voltage GPU$gpuid"
         for voltstate in {1..15}
         do

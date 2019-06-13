@@ -10,7 +10,7 @@
 sudo ./ohgodatool -i 3 --core-state 7 --core-vddc-idx 13 --mem-state 2  --mem-clock 2100
 sudo ./ohgodatool -i 5 --mem-state 2 --mem-clock 2000 --core-state 7 --core-vddc-idx 13
 
-vddc_voltages=(1050 750 750 1000 750 910)
+vddc_voltages=(1055 730 705 1015 700 930)
 for gpuid in ${!vddc_voltages[*]}
 do
     if [[ "$gpuid" != "0" ]] && [[ "$gpuid" != "0" ]];
